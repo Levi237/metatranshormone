@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-// import firebase from 'firebase/app';
+// import firebase from 'firebase';
 
 import dotenv from 'dotenv';
 dotenv.config();
