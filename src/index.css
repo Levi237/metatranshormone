@@ -1,7 +1,15 @@
+/*========== THEME FONTS ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300;500;700&family=Carrois+Gothic+SC&family=Overlock+SC&family=Quicksand:wght@300;400;500;600;700&display=swap');
+/*========== THEME COLORS ==========*/
+:root {
+  --blue: rgb(85, 205, 252);
+  --pink: rgb(247, 168, 184);
+}
+
+/*========== GLOBAL RULES ==========*/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,10 +20,13 @@ code {
     monospace;
 }
 
-/*========== THEME COLORS ==========*/
-:root {
-  --blue: rgb(85, 205, 252);
-  --pink: rgb(247, 168, 184);
+h1,h2,h3,ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 100%;
+}
+h1 {
+  font-family: 'Overlock SC', cursive;
 }
 
 /* NAV MENU ON/OFF SWITCH */
@@ -36,5 +47,5 @@ code {
 
 /* NAV GLOBAL STYLE */
 .nav-active {
-  text-decoration: underline!important;
+  color: var(--blue)!important;
 }

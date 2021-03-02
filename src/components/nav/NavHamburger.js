@@ -27,7 +27,7 @@ const Hamburger = styled.div`
       background-color: var(--pink);
     }
     &:nth-of-type(2){
-      background-color: #fff;
+      background-color: var(--blue);
     }
     &:last-of-type{
       background-color: var(--pink);

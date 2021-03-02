@@ -21,29 +21,37 @@ export default class App extends Component {
         <NavMenu toggleMenu={this.toggleMenu}/>
         <NavBar toggleMenu={this.toggleMenu}/>
         <Switch>
-            <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>HELLO HOME</h1></FullScreenContainer>} />
-            <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>HELLO ROOT</h1></FullScreenContainer>} />
+            <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>Metamorphosis Home</h1></FullScreenContainer>} />
+            <Route path={routes.SERV} exact render={() => <ScreenContainer><h1>Metamorphosis Services</h1></ScreenContainer>} />
+            <Route path={routes.MAIL} exact render={() => <ScreenContainer><h1>Metamorphosis Contact</h1></ScreenContainer>} />
+            <Route path={routes.INFO} exact render={() => <ScreenContainer><h1>Metamorphosis About</h1></ScreenContainer>} />
+            <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>} />
         </Switch>
-        
+        <FooterContainer>
+
+        </FooterContainer>
       </AppContainer>
     );
   };
 };
 
 const AppContainer = styled.div`
-  h1,h2,h3,ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    line-height: 100%;
-  }
   h1 {
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
 `;
-const FullScreenContainer = styled.div`
+const ScreenContainer = styled.div`
   width: 100vw;
-  height: calc( 100vh - 120px );
   padding-top: 120px;
-  background: var(--blue);
+  min-height: calc(100vh - 360px );
+  background-color: #fff;
+`;
+const FullScreenContainer = styled(ScreenContainer)`
+  height: calc( 100vh - 120px );
+`;
+const FooterContainer = styled.div`
+  width: 100vw;
+  height: 240px;
+  background: var(--pink);
 `;

@@ -13,10 +13,10 @@ export default class NavBar extends Component {
                     <img src="logo512.png"/>
                 </LogoWrapper>
                 <NavWrapper>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} >HOME</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT</NavLink>
-                    <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.HOME} >HOME<hr/></NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES<hr/></NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT<hr/></NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT<hr/></NavLink>
                     <NavHamburger toggleMenu={this.props.toggleMenu}/>
                 </NavWrapper>
             </LocalWrapper>
@@ -47,11 +47,24 @@ const NavWrapper = styled.div`
     margin-top: 50px;
 
     > a {
-        color: #fff;
+        font-size: 20px;
+        color: #121916;
         margin-right: 50px;
         text-decoration: none;
+        transition: .3s ease;
+        hr {
+            width: 0;
+            height: 1px;
+            border: 0;
+            transition: .3s ease;
+        }
         &:hover {
             cursor: pointer;
+            color: var(--pink)!important;
+            hr {
+                width: 100%;
+                background-color: var(--pink)!important;
+            }
         }
         display: none;
         @media screen and ( min-width: ${screens.mobile} ) {
