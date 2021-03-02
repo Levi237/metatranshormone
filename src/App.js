@@ -8,6 +8,8 @@ import { screens }          from './constants/screens';
 import NavBar               from './components/nav/NavBar';
 import NavMenu              from './components/nav/NavMenu';
 
+import Contact              from './components/contact';
+
 export default class App extends Component {
   state = {}
   toggleMenu = () => {
@@ -23,7 +25,7 @@ export default class App extends Component {
         <Switch>
             <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>Metamorphosis Home</h1></FullScreenContainer>} />
             <Route path={routes.SERV} exact render={() => <ScreenContainer><h1>Metamorphosis Services</h1></ScreenContainer>} />
-            <Route path={routes.MAIL} exact render={() => <ScreenContainer><h1>Metamorphosis Contact</h1></ScreenContainer>} />
+            <Route path={routes.MAIL} exact render={() => <ScreenContainer><h1>Metamorphosis Contact</h1><Contact/></ScreenContainer>} />
             <Route path={routes.INFO} exact render={() => <ScreenContainer><h1>Metamorphosis About</h1></ScreenContainer>} />
             <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>} />
         </Switch>
@@ -48,6 +50,7 @@ const ScreenContainer = styled.div`
 `;
 const FullScreenContainer = styled(ScreenContainer)`
   height: calc( 100vh - 120px );
+  transition: height .3s ease;
 `;
 const FooterContainer = styled.div`
   width: 100vw;
