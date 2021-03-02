@@ -4,14 +4,17 @@ import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
 
+import NavBar               from './components/nav/NavBar';
+
 export default class App extends Component {
   state = {}
   render(){
     return (
       <AppContainer>
+        <NavBar/>
         <Switch>
-            <Route path={routes.HOME} exact render={() => <><h1>HELLO HOME</h1></>} />
-            <Route path={routes.ROOT} render={() => <><h1>HELLO ROOT</h1></>} />
+            <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>HELLO HOME</h1></FullScreenContainer>} />
+            <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>HELLO ROOT</h1></FullScreenContainer>} />
         </Switch>
         
       </AppContainer>
@@ -29,4 +32,9 @@ const AppContainer = styled.div`
     text-align: center;
     text-transform: uppercase;
   }
+`;
+const FullScreenContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background: var(--blue);
 `;
