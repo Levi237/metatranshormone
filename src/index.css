@@ -13,9 +13,7 @@ code {
 }
 
 /*========== THEME COLORS ==========*/
-.blue-background {
-  background-color: rgb(85, 205, 252);
-}
-.background-pink {
-  background-color: rgb(247, 168, 184);
+:root {
+  --blue: rgb(85, 205, 252);
+  --pink: rgb(247, 168, 184);
 }
