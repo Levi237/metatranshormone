@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
 import * as routes          from '../../constants/routes';
-
+import { screens }          from '../../constants/screens';
 export default class NavBar extends Component {
 
     render(){
@@ -27,6 +27,10 @@ const LocalWrapper = styled.div`
     width: 100vw;
     height: 120px;
     max-height: 120px;
+    display: none;
+    @media screen and ( min-width: ${screens.mobile} ) {
+        display: block;
+    }
 `;
 const LogoWrapper = styled.div`
     display: inline-block;
@@ -44,7 +48,7 @@ const NavWrapper = styled.div`
     line-height: 20px;
     margin-top: 40px;
     a {
-        margin-right: 40px;
+        margin-right: 50px;
         text-decoration: none;
         &:hover {
             cursor: pointer;
