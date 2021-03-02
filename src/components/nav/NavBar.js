@@ -10,7 +10,12 @@ export default class NavBar extends Component {
         return(
             <LocalWrapper>
                 <LogoWrapper>
-                    <img src="logo512.png"/><span>Metamoprhosis</span>
+                    <NavLink activeClassName="nav-active" to={routes.HOME} >
+                        <>
+                            <img src="logo512.png"/>
+                            <span>Metamoprhosis</span>
+                        </>
+                    </NavLink>
                 </LogoWrapper>
                 <NavWrapper>
                     <NavLink activeClassName="nav-active" to={routes.HOME} >HOME<hr/></NavLink>
@@ -32,6 +37,11 @@ const LocalWrapper = styled.div`
 `;
 const LogoWrapper = styled.div`
     display: inline-block;
+    > a {
+        color: #121916;
+        text-decoration: none;
+        transition: .3s ease;
+    }
     img{
         width: 80px;
         margin: 20px 0 0 20px;
@@ -48,12 +58,12 @@ const LogoWrapper = styled.div`
 `;
 const NavWrapper = styled.div`
     display: inline-block;
-    width: calc(100vw - 120px);
-    text-align: right;
     vertical-align: top;
+    width: calc(100vw - 120px);
+    margin-top: 50px;
+    text-align: right;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 50px;
 
     > a {
         font-size: 20px;
