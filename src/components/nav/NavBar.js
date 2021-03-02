@@ -10,7 +10,7 @@ export default class NavBar extends Component {
         return(
             <LocalWrapper>
                 <LogoWrapper>
-                    <img src="logo512.png"/>
+                    <img src="logo512.png"/><span>Metamoprhosis</span>
                 </LogoWrapper>
                 <NavWrapper>
                     <NavLink activeClassName="nav-active" to={routes.HOME} >HOME<hr/></NavLink>
@@ -34,7 +34,16 @@ const LogoWrapper = styled.div`
     display: inline-block;
     img{
         width: 80px;
-        margin: 20px;
+        margin: 20px 0 0 20px;
+    }
+    span {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+        @media screen and ( min-width: ${screens.mobile} ) {
+            top: 96px;
+            left: 25px;
+        }
     }
 `;
 const NavWrapper = styled.div`

@@ -38,7 +38,6 @@ export default class App extends Component {
 const AppContainer = styled.div`
   h1 {
     text-align: center;
-    // text-transform: uppercase;
   }
 `;
 const ScreenContainer = styled.div`
