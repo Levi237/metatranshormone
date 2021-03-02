@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*========== THEME COLORS ==========*/
+.blue-background {
+  background-color: rgb(85, 205, 252);
+}
+.background-pink {
+  background-color: rgb(247, 168, 184);
+}
