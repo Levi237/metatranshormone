@@ -47,6 +47,7 @@ const NavWrapper = styled.div`
     margin-top: 50px;
 
     > a {
+        color: #fff;
         margin-right: 50px;
         text-decoration: none;
         &:hover {
