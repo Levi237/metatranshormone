@@ -3,6 +3,7 @@ import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
 import * as routes          from '../../constants/routes';
 import { screens }          from '../../constants/screens';
+import NavHamburger         from './NavHamburger';
 export default class NavBar extends Component {
 
     render(){
@@ -16,6 +17,7 @@ export default class NavBar extends Component {
                     <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT</NavLink>
+                    <NavHamburger toggleMenu={this.props.toggleMenu}/>
                 </NavWrapper>
             </LocalWrapper>
         )
@@ -27,10 +29,6 @@ const LocalWrapper = styled.div`
     width: 100vw;
     height: 120px;
     max-height: 120px;
-    display: none;
-    @media screen and ( min-width: ${screens.mobile} ) {
-        display: block;
-    }
 `;
 const LogoWrapper = styled.div`
     display: inline-block;
@@ -46,12 +44,17 @@ const NavWrapper = styled.div`
     vertical-align: top;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 40px;
-    a {
+    margin-top: 50px;
+
+    > a {
         margin-right: 50px;
         text-decoration: none;
         &:hover {
             cursor: pointer;
+        }
+        display: none;
+        @media screen and ( min-width: ${screens.mobile} ) {
+            display: inline-block;
         }
     }
 `;
