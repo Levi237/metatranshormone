@@ -17,3 +17,43 @@ code {
   --blue: rgb(85, 205, 252);
   --pink: rgb(247, 168, 184);
 }
+
+
+
+/* ON/OFF SWITCH */
+#menu.active {
+  max-width: 40vw;
+}
+.active {
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  transition: .8s ease-in-out;
+}
+
+#email.inactive{
+  max-height: 0px;
+}
+#menu.inactive {
+  max-height: 100vh;
+  font-size: 1px;
+  color: transparent!important;
+}
+.inactive {
+  max-width: 0;
+  transition: .8s ease-in-out;
+  transition-delay: .3s !important;
+}
+
+@media screen and (max-width: 945px){
+  #menu.active, #email.active {
+    max-width: 100vw;
+  }
+  .active {
+    max-width: 100vw;
+  }
+}
+
+.nav-active {
+  color:#29bfff !important;
+}
