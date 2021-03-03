@@ -7,8 +7,12 @@ import { screens }          from './constants/screens';
 
 import NavBar               from './components/nav/NavBar';
 import NavMenu              from './components/nav/NavMenu';
+import Footer               from './components/footer';
 
+import About                from './components/about';
 import Contact              from './components/contact';
+import Home                 from './components/home';
+import Services             from './components/services';
 
 export default class App extends Component {
   state = {
@@ -35,15 +39,39 @@ export default class App extends Component {
         <NavMenu toggleMenu={this.toggleMenu}/>
         <NavBar toggleMenu={this.toggleMenu}/>
         <Switch>
-            <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>Metamorphosis Home</h1></FullScreenContainer>} />
-            <Route path={routes.SERV} exact render={() => <ScreenContainer><h1>Metamorphosis Services</h1></ScreenContainer>} />
-            <Route path={routes.MAIL} exact render={() => <ScreenContainer><Contact contact={contact}/></ScreenContainer>} />
-            <Route path={routes.INFO} exact render={() => <ScreenContainer><h1>Metamorphosis About</h1></ScreenContainer>} />
-            <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>} />
+            <Route path={routes.HOME} exact render={() => 
+              <FullScreenContainer>
+                <Home/>
+              </FullScreenContainer>
+              } />
+            <Route path={routes.SERV} exact render={() => 
+              <>
+                <ScreenContainer>
+                  <Services/>
+                </ScreenContainer>
+                <Footer contact={contact}/>
+              </>
+              } />
+            <Route path={routes.MAIL} exact render={() => 
+              <>
+                <ScreenContainer>
+                  <Contact contact={contact}/>
+                </ScreenContainer>
+                <Footer contact={contact}/>
+              </>
+              } />
+            <Route path={routes.INFO} exact render={() => 
+              <>
+                <ScreenContainer>
+                  <About/>
+                </ScreenContainer>
+                <Footer contact={contact}/>
+              </>
+              } />
+            <Route path={routes.ROOT} render={() => 
+              <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>
+              } />
         </Switch>
-        <FooterContainer>
-
-        </FooterContainer>
       </AppContainer>
     );
   };
@@ -53,19 +81,20 @@ const AppContainer = styled.div`
   h1 {
     margin-bottom: 40px!important;
     text-align: center;
+  }
 `;
-const ScreenContainer = styled.div`
-  width: 100vw;
-  padding-top: 120px;
+const Container = styled.div`
+width: 100vw;
+padding-top: 120px;
+background-color: #fff;
+transition: height .3s ease;
+`;
+const ScreenContainer = styled(Container)`
+  padding-bottom: 60px;
   min-height: calc(100vh - 360px );
   background-color: #fff;
 `;
-const FullScreenContainer = styled(ScreenContainer)`
+const FullScreenContainer = styled(Container)`
   height: calc( 100vh - 120px );
-  transition: height .3s ease;
-`;
-const FooterContainer = styled.div`
-  width: 100vw;
-  height: 240px;
-  background: var(--lavender);
+  padding-bottom: 0;
 `;
