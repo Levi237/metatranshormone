@@ -12,7 +12,7 @@ export default class EmailForm extends Component {
     render(){
         const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
 
-        return(<>
+        return(
             <Form 
                 // action={`https://${process.env.REACT_APP_MAILCHIMP_SRC}.us5.list-manage.com/subscribe/post?u=${process.env.REACT_APP_MAILCHIMP_U}&amp;id=${process.env.REACT_APP_MAILCHIMP_ID}`}
                 method="POST" 
@@ -84,7 +84,7 @@ export default class EmailForm extends Component {
                     <input type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" className="button"/>
                 </div>
               </Form> 
-        </>);
+        );
     };
 };
 
@@ -179,10 +179,10 @@ const Form = styled.form`
         }
     }
     @media screen and (max-width: 900px) {
-        padding: 40px 0 20px 0;
+        padding: 0;
     }
     @media screen and (max-width: 698px) {
-        margin: 75px auto;
+        margin: 0 auto;
 
         label {
             display: block;
