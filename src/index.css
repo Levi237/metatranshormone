@@ -32,7 +32,9 @@ h1,h2,h3,ul {
 h1 {
   font-family: 'Overlock SC', cursive;
 }
-
+hr {
+  background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
+}
 /* NAV MENU ON/OFF SWITCH */
 #menu.active {
   max-width: 100vw;
@@ -52,5 +54,5 @@ h1 {
 /* NAV GLOBAL STYLE */
 .nav-active {
   color: var(--lavender)!important;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
