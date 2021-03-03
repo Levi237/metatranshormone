@@ -79,10 +79,10 @@ const NavWrapper = styled.div`
         }
         &:hover {
             cursor: pointer;
-            color: var(--pink)!important;
+            color: var(--lavender)!important;
             hr {
                 width: 100%;
-                background-color: var(--pink)!important;
+                // background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
             }
         }
         display: none;
