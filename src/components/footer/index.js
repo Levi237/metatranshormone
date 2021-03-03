@@ -46,7 +46,7 @@ export default class Footer extends Component {
 const LocalWrapper = styled.div`
     width: 100vw;
     height: 400px;
-    background: lightgray;
+    background: #e5e5e5;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
