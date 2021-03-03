@@ -4,6 +4,8 @@
 :root {
   --blue: rgb(85, 205, 252);
   --pink: rgb(247, 168, 184);
+  --periwinkle: rgb(166,187,218);
+  --lavender: rgb(169, 170, 219);
 }
 
 /*========== GLOBAL RULES ==========*/
@@ -20,9 +22,11 @@ code {
     monospace;
 }
 
-h1,h2,h3,ul {
+h1,h2,h3,h4,h5,ul,p,hr {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+h1,h2,h3,ul {
   line-height: 100%;
 }
 h1 {
@@ -47,5 +51,5 @@ h1 {
 
 /* NAV GLOBAL STYLE */
 .nav-active {
-  color: var(--blue)!important;
+  color: var(--lavender)!important;
 }
