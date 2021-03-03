@@ -12,7 +12,7 @@ export default class NavBar extends Component {
                 <LogoWrapper>
                     <NavLink activeClassName="nav-active" to={routes.ROOT} >
                         <>
-                            <img src="logo512.png"/>
+                            <img src="logo192.png"/>
                             <span>Metamoprhosis</span>
                         </>
                     </NavLink>
