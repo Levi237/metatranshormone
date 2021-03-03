@@ -67,5 +67,5 @@ const FullScreenContainer = styled(ScreenContainer)`
 const FooterContainer = styled.div`
   width: 100vw;
   height: 240px;
-  background: var(--pink);
+  background: var(--lavender);
 `;
