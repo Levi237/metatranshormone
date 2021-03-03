@@ -17,21 +17,26 @@ export default class Footer extends Component {
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT</NavLink>
                 </section>
                 <section>
-                    <h2>
-                        {contact.name}
-                    </h2>
-                    <p>
-                        {contact.address}
-                        {" "}
-                        {contact.suite}
-                        <br/>
-                        {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
-                        <br/>
-                        <span>{contact.phone}</span>
-                    </p>
+                    <div>
+                        <h3>
+                            {contact.name},{" "}{contact.title}
+                        </h3>
+                        <p>
+                            {contact.address}
+                            {" "}
+                            {contact.suite}
+                            <br/>
+                            {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
+                            <br/>
+                            <span>{contact.phone}</span>
+                        </p>
+                    </div>
                 </section>
                 <section>
-                    <span>Built by <a href="https://levieiko.com">LeviEiko.com</a></span>
+                    <div>
+                        <img src="https://levieiko.com/logo.png" atl="levieiko.com" title="levieiko.com"/>
+                        <span>Built by <a href="https://levieiko.com">LeviEiko.com</a></span>
+                    </div>
                 </section>
             </LocalWrapper>
         )
@@ -40,26 +45,44 @@ export default class Footer extends Component {
 
 const LocalWrapper = styled.div`
     width: 100vw;
-    height: 240px;
-    background: var(--lavender);
+    height: 400px;
+    background: lightgray;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-        ' left center right ';
+        ' center'
+        ' left '
+        ' right ';
+    @media screen and (min-width: ${screens.mobile}){
+        height: 180px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            ' left center right ';
+
+    }
     > section {
-        padding: 40px;
+        position: relative;
+        padding: 0 30px;
+        @media screen and (min-width: ${screens.mobile}){
+            padding: 30px;
+        }
         &:first-of-type{
-            grid-name: left;
+            grid-area: left;
             h3 {
                 padding-bottom: 10px;
             }
             a {
-                display: block;
                 text-decoration: none!important;
                 color: #fff;
-                @media screen and ( min-width: ${screens.desktop} ) {
+                margin: 0 10px 5px 0;
+                display: block;
+                &:last-of-type {
+                    margin: 0 0 0 0;
+                }
+                @media screen and (min-width: ${screens.mobile}){
                     display: inline-block;
-                    margin: 0 5px 0 0;
                 }
             }
             a.nav-active {
@@ -68,14 +91,32 @@ const LocalWrapper = styled.div`
             }
         }
         &:nth-of-type(2){
-            grid-name: center;
+            grid-area: center;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 14px;
+            }
         }
         &:nth-of-type(3){
-            grid-name: right;
+            grid-area: right;
             text-align: right;
-            span{
-                vertical-align: bottom;
+            >div {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                img{
+                    width: 40px;
+                    margin-top: 60px;
+                }
+                span{
+                    display: block;
+                }
             }
         }
     }
