@@ -52,4 +52,5 @@ h1 {
 /* NAV GLOBAL STYLE */
 .nav-active {
   color: var(--lavender)!important;
+  font-weight: 600;
 }
