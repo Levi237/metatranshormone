@@ -52,6 +52,7 @@ export default class App extends Component {
 const AppContainer = styled.div`
   h1 {
     margin-bottom: 40px!important;
+    text-align: center;
 `;
 const ScreenContainer = styled.div`
   width: 100vw;
