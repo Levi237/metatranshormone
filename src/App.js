@@ -11,13 +11,25 @@ import NavMenu              from './components/nav/NavMenu';
 import Contact              from './components/contact';
 
 export default class App extends Component {
-  state = {}
+  state = {
+    contact: {
+      name: 'Kristen Vierregger',
+      title: 'MD',
+      address: '8081 Stanton Ave.',
+      suite: '#300',
+      city: 'Buena Park',
+      state: 'CA',
+      zipcode: '90620',
+      phone: '(714) 484-8000'
+    },
+}
   toggleMenu = () => {
     const hamburgerMenu = document.getElementById('menu');
     hamburgerMenu.classList.toggle('active');
     hamburgerMenu.classList.toggle('inactive');
   };
   render(){
+    const { contact } = this.state
     return (
       <AppContainer>
         <NavMenu toggleMenu={this.toggleMenu}/>
@@ -25,7 +37,7 @@ export default class App extends Component {
         <Switch>
             <Route path={routes.HOME} exact render={() => <FullScreenContainer><h1>Metamorphosis Home</h1></FullScreenContainer>} />
             <Route path={routes.SERV} exact render={() => <ScreenContainer><h1>Metamorphosis Services</h1></ScreenContainer>} />
-            <Route path={routes.MAIL} exact render={() => <ScreenContainer><h1>Metamorphosis Contact</h1><Contact/></ScreenContainer>} />
+            <Route path={routes.MAIL} exact render={() => <ScreenContainer><Contact contact={contact}/></ScreenContainer>} />
             <Route path={routes.INFO} exact render={() => <ScreenContainer><h1>Metamorphosis About</h1></ScreenContainer>} />
             <Route path={routes.ROOT} render={() => <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>} />
         </Switch>
@@ -39,8 +51,7 @@ export default class App extends Component {
 
 const AppContainer = styled.div`
   h1 {
-    text-align: center;
-  }
+    margin-bottom: 40px!important;
 `;
 const ScreenContainer = styled.div`
   width: 100vw;
