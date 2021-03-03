@@ -161,7 +161,7 @@ hr {
     padding: 0;
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
+    // background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
     text-align: center;
 }
 hr:after {
