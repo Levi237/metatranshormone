@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                     </NavLink>
                 </LogoWrapper>
                 <NavWrapper>
-                    <NavLink activeClassName="nav-active" to={routes.ROOT} >HOME<hr/></NavLink>
+                    <NavLink activeClassName="nav-active" exact to={routes.ROOT} >HOME<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT<hr/></NavLink>
@@ -48,6 +48,7 @@ const LogoWrapper = styled.div`
     }
     span {
         position: absolute;
+        font-size: 12px;
         top: 50px;
         left: 100px;
         @media screen and ( min-width: ${screens.mobile} ) {

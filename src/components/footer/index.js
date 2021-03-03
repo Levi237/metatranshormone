@@ -11,7 +11,7 @@ export default class Footer extends Component {
             <LocalWrapper>
                 <section>
                     <h3>Quick Links</h3>
-                    <NavLink activeClassName="nav-active" to={routes.ROOT} >HOME</NavLink>
+                    <NavLink activeClassName="nav-active" exact to={routes.ROOT} >HOME</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT</NavLink>
@@ -34,7 +34,7 @@ export default class Footer extends Component {
                 </section>
                 <section>
                     <div>
-                        <img src="https://levieiko.com/logo.png" atl="levieiko.com" title="levieiko.com"/>
+                        <a href="https://levieiko.com"><img src="https://levieiko.com/logo.png" atl="levieiko.com" title="levieiko.com"/></a>
                         <span>Built by <a href="https://levieiko.com">LeviEiko.com</a></span>
                     </div>
                 </section>
@@ -46,7 +46,8 @@ export default class Footer extends Component {
 const LocalWrapper = styled.div`
     width: 100vw;
     height: 400px;
-    background: #e5e5e5;
+    background: var(--black);
+    color: #fff;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
@@ -116,6 +117,13 @@ const LocalWrapper = styled.div`
                 }
                 span{
                     display: block;
+                }
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                &:hover {
+                    color: var(--blue);
                 }
             }
         }

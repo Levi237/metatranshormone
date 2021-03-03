@@ -12,7 +12,7 @@ export default class NavMenu extends Component {
         return(
             <NavContainer id="menu" className="inactive">
                 <div>
-                    <NavLink activeClassName="nav-active" to={routes.ROOT} onClick={() => {toggleMenu()}}>HOME</NavLink>
+                    <NavLink activeClassName="nav-active" exact to={routes.ROOT} onClick={() => {toggleMenu()}}>HOME</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} onClick={() => {toggleMenu()}}>SERVICES</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} onClick={() => {toggleMenu()}}>ABOUT</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} onClick={() => {toggleMenu()}}>CONTACT</NavLink>
