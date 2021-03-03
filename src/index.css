@@ -6,13 +6,15 @@
   --pink: rgb(247, 168, 184);
   --periwinkle: rgb(166,187,218);
   --lavender: rgb(169, 170, 219);
+  --black: rgb(48, 48, 48);
 }
 
 /*========== GLOBAL RULES ==========*/
 body {
   margin: 0;
   font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
-    sans-serif;
+  sans-serif;
+  color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
