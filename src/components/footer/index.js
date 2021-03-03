@@ -11,7 +11,7 @@ export default class Footer extends Component {
             <LocalWrapper>
                 <section>
                     <h3>Quick Links</h3>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} >HOME</NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.ROOT} >HOME</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT</NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT</NavLink>

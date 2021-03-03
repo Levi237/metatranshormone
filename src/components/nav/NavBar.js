@@ -10,7 +10,7 @@ export default class NavBar extends Component {
         return(
             <LocalWrapper>
                 <LogoWrapper>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} >
+                    <NavLink activeClassName="nav-active" to={routes.ROOT} >
                         <>
                             <img src="logo512.png"/>
                             <span>Metamoprhosis</span>
@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                     </NavLink>
                 </LogoWrapper>
                 <NavWrapper>
-                    <NavLink activeClassName="nav-active" to={routes.HOME} >HOME<hr/></NavLink>
+                    <NavLink activeClassName="nav-active" to={routes.ROOT} >HOME<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.SERV} >SERVICES<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.INFO} >ABOUT<hr/></NavLink>
                     <NavLink activeClassName="nav-active" to={routes.MAIL} >CONTACT<hr/></NavLink>

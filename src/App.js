@@ -39,7 +39,7 @@ export default class App extends Component {
         <NavMenu toggleMenu={this.toggleMenu}/>
         <NavBar toggleMenu={this.toggleMenu}/>
         <Switch>
-            <Route path={routes.HOME} exact render={() => 
+            <Route path={routes.ROOT} exact render={() => 
               <FullScreenContainer>
                 <Home/>
               </FullScreenContainer>
