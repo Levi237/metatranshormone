@@ -44,6 +44,7 @@ export default class Contact extends Component {
 
 
 const LeftSection = styled.div`
+max-width: 700px;
 span {
     color: var(--lavender);
     font-weight: 800;
@@ -132,6 +133,8 @@ const RightSection = styled.div`
 `;
 
 const LocalWrapper = styled.div`
+max-width: 1400px;
+margin: 0 auto;
 > h1 {
     text-align: center;
     position: absolute;
