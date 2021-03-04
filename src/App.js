@@ -88,9 +88,12 @@ const AppContainer = styled.div`
 `;
 const Container = styled.div`
   width: 100vw;
-  padding-top: 120px;
+  padding-top: 80px;
   background-color: #fff;
   transition: height .3s ease;
+  @media screen and (min-width: ${ screensize.mobile}) {
+    padding-top: 120px;
+  }
 `;
 const ScreenContainer = styled(Container)`
   padding-bottom: 60px;
