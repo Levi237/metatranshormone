@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmailForm from './EmailForm';
-import { screens } from '../../constants/screens';
+import { screensize } from '../../constants/screensize';
 
 export default class Contact extends Component {
     render(){
@@ -75,12 +75,12 @@ text-align: center;
 
         }
     }
-    @media screen and ( min-width: ${screens.small} ) {
+    @media screen and ( min-width: ${screensize.small} ) {
         width: 80%;
         max-width: 600px;
         margin: 0 auto;
     }
-    @media screen and ( min-width: ${screens.mobile} ) {
+    @media screen and ( min-width: ${screensize.mobile} ) {
         text-align: left;
         h2 {
             margin-top: 0px;
@@ -108,7 +108,7 @@ text-align: center;
             }
         }
     }
-    @media screen and ( min-width: ${screens.tablet} ) {
+    @media screen and ( min-width: ${screensize.tablet} ) {
         width: 50%;
         > div {
             width: 80%;
@@ -139,7 +139,7 @@ margin: 0 auto;
     right: 20px;
     top: calc(120px + 10vw);
     color: white;
-  @media screen and ( min-width: ${screens.small} ) {
+  @media screen and ( min-width: ${screensize.small} ) {
       color: black;
       position: relative!important;
       top:0;
@@ -180,13 +180,13 @@ hr:after {
         // margin: 0 auto;
     }
 }
-@media screen and ( min-width: ${screens.mobile} ) {
+@media screen and ( min-width: ${screensize.mobile} ) {
     > div {
         width: 100%;
         vertical-align: top;
     }
 }
-    @media screen and ( min-width: ${screens.tablet} ) {
+    @media screen and ( min-width: ${screensize.tablet} ) {
         // display: flex;
         // justify-content: center;
         // align-items: center;

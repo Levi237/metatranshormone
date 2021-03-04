@@ -1,7 +1,7 @@
 import React       from 'react';
 import styled      from 'styled-components';
 
-import { screens } from '../../constants/screens';
+import { screensize } from '../../constants/screensize';
 
 const NavHamburger = ({ toggleMenu }) => {
   return(
@@ -34,7 +34,7 @@ const Hamburger = styled.div`
     }
   }
   
-  @media screen and ( min-width: ${screens.mobile} ) {
+  @media screen and ( min-width: ${screensize.mobile} ) {
       display: none;
   }
 `;

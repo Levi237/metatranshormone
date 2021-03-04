@@ -1,4 +1,4 @@
-export const screens = {
+export const screensize = {
     small: '481px',
     mobile: '641px',
     tablet: '981px',

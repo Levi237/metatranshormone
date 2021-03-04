@@ -3,7 +3,7 @@ import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
-import { screens }          from './constants/screens';
+import { screensize }          from './constants/screensize';
 
 import NavBar               from './components/nav/NavBar';
 import NavMenu              from './components/nav/NavMenu';
@@ -81,7 +81,7 @@ const AppContainer = styled.div`
   h1.title {
     margin-bottom: 40px!important;
     text-align: center;
-    @media screen and (min-width: ${ screens.mobile}) {
+    @media screen and (min-width: ${ screensize.mobile}) {
       margin-top: 40px;
     }
   }

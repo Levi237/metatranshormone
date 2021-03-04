@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
 
-import { screens }          from '../../constants/screens';
+import { screensize }          from '../../constants/screensize';
 // import { NavLink }          from 'react-router-dom';
 
 export default class About extends Component {
@@ -96,7 +96,7 @@ const GridContainer = styled.div`
     ' one ' 
         ' three' 
         ' four ';
-    @media screen and (min-width: ${ screens.tablet}) {
+    @media screen and (min-width: ${ screensize.tablet}) {
         max-width: 1000px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
@@ -140,7 +140,7 @@ const GridContainer = styled.div`
         }
         &:nth-of-type(even) {
         }
-        @media screen and (min-width: ${ screens.tablet}) {
+        @media screen and (min-width: ${ screensize.tablet}) {
             padding: 30px;
             &:first-of-type {
                 h2 {

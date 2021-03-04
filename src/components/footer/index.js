@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled               from 'styled-components';
 import { NavLink }          from 'react-router-dom';
 import * as routes          from '../../constants/routes';
-import { screens }        from '../../constants/screens';
+import { screensize }        from '../../constants/screensize';
 
 export default class Footer extends Component {
     render(){
@@ -55,7 +55,7 @@ const LocalWrapper = styled.div`
         ' center'
         ' left '
         ' right ';
-    @media screen and (min-width: ${screens.mobile}){
+    @media screen and (min-width: ${screensize.mobile}){
         height: 180px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -66,7 +66,7 @@ const LocalWrapper = styled.div`
     > section {
         position: relative;
         padding: 0 30px;
-        @media screen and (min-width: ${screens.mobile}){
+        @media screen and (min-width: ${screensize.mobile}){
             padding: 30px;
         }
         &:first-of-type{
@@ -82,7 +82,7 @@ const LocalWrapper = styled.div`
                 &:last-of-type {
                     margin: 0 0 0 0;
                 }
-                @media screen and (min-width: ${screens.mobile}){
+                @media screen and (min-width: ${screensize.mobile}){
                     display: inline-block;
                 }
             }

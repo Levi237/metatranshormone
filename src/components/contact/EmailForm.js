@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { screensize } from '../../constants/screensize';
 export default class EmailForm extends Component { 
     state = {
         emailValue: '',
@@ -182,13 +183,16 @@ const Form = styled.form`
         padding: 0;
     }
     @media screen and (max-width: 698px) {
-        margin: 0 auto;
+        // margin: 0 auto;
 
         label {
             display: block;
             width: 90%;
             margin: 0 auto!important;
         }
+    }
+    @media screen and ( min-width: ${screensize.mobile}){
+
     }
 `;
 

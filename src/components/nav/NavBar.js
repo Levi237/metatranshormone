@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
 import * as routes          from '../../constants/routes';
-import { screens }          from '../../constants/screens';
+import { screensize }          from '../../constants/screensize';
 import NavHamburger         from './NavHamburger';
 export default class NavBar extends Component {
 
@@ -51,7 +51,7 @@ const LogoWrapper = styled.div`
         font-size: 12px;
         top: 50px;
         left: 100px;
-        @media screen and ( min-width: ${screens.mobile} ) {
+        @media screen and ( min-width: ${screensize.mobile} ) {
             top: 96px;
             left: 25px;
         }
@@ -87,7 +87,7 @@ const NavWrapper = styled.div`
             }
         }
         display: none;
-        @media screen and ( min-width: ${screens.mobile} ) {
+        @media screen and ( min-width: ${screensize.mobile} ) {
             display: inline-block;
         }
     }
