@@ -24,15 +24,19 @@ code {
     monospace;
 }
 
-h1,h2,h3,h4,h5,ul,p,hr {
+h1,h2,h3,h4,h5,p,ul,hr {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-h1,h2,h3,ul {
+h1,h2,h3,h4,h5,ul {
   line-height: 100%;
 }
 h1 {
   font-family: 'Overlock SC', cursive;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 500;
 }
 hr {
   background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);

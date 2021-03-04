@@ -7,54 +7,62 @@ export default class Contact extends Component {
     render(){
         const { contact } = this.props;
         return(
-            <TwoSections>
+            <TwoSectionsWrapper>
                 <h1 class="title">Contact Us</h1>
-                <LeftSection>
-                    <div>
-                        <h2>
-                            {contact.name}, {contact.title}
-                        </h2>
-                        <section>
-                            <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
-                        </section>
-                        <section>
+                <TwoSections>
+                    <LeftSection>
+                        <NestedTwoSection>
                             <h2>
-                                {contact.name},{" "}{contact.title}
+                                {contact.name}, {contact.title}
                             </h2>
-                            <p>
-                                {contact.address}
-                                {" "}
-                                {contact.suite}
-                                <br/>
-                                {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
-                                <br/>
-                                <span>{contact.phone}</span>
-                            </p>
-                        </section>
-                    </div>
-                    <hr/>
-                </LeftSection>
-                <RightSection>
-                    <EmailForm><h2>Send Us a Message</h2></EmailForm>
-                </RightSection>
-            </TwoSections>
+                            <section>
+                                <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
+                            </section>
+                            <section>
+                                <h2>
+                                    {contact.name},{" "}{contact.title}
+                                </h2>
+                                <p>
+                                    {contact.address}
+                                    {" "}
+                                    {contact.suite}
+                                    <br/>
+                                    {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
+                                    <br/>
+                                    <span>{contact.phone}</span>
+                                </p>
+                            </section>
+                        </NestedTwoSection>
+                        <hr/>
+                    </LeftSection>
+                    <RightSection>
+                        <EmailForm><h2>Send Us a Message</h2></EmailForm>
+                    </RightSection>
+                </TwoSections>
+            </TwoSectionsWrapper>
         );
     };
 };
 
 
-const LeftSection = styled.div`
-max-width: 600px;
-span {
-    color: var(--lavender);
-    font-weight: 800;
-}
-h2 {
-    margin-top: 40px;
-}
-text-align: center;
-    > div {
-        width:100%;
+const TwoSectionsWrapper = styled.div`
+    > h1 {
+        text-align: center;
+        position: absolute;
+        right: 20px;
+        top: calc(80px + 10vw);
+        color: white;
+        @media screen and ( min-width: ${screensize.small} ) {
+            color: black;
+            position: relative!important;
+            top:0;
+            right:0;
+            left:0;
+        }
+    }
+`;
+const NestedTwoSection = styled.div`
+    width:100%;
         margin: 0;
         > h2 {
             display: none;
@@ -71,128 +79,86 @@ text-align: center;
                     font-size: 16px;
                     line-height: 150%;
                 }
+                span {
+                    color: var(--lavender);
+                    font-weight: 800;
+                }
             }
 
         }
+        @media screen and ( min-width: ${screensize.mobile} ) {
+        width:100%;
+        margin: 0;
+        > section {
+            display: inline-block;
+            vertical-align: middle;
+            &:first-of-type {
+                width: 50%;
+            }
+            &:last-of-type {
+                width: 45%;
+                padding-left: 5%;
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @media screen and ( min-width: ${screensize.tablet} ) {
+        width: 80%;
+        margin: 0 10%;
+        > h2 {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+        }
+        > section {
+            vertical-align: middle;
+            > h2 {
+                display: none;
+            }
+        }
+    }
+`;
+const LeftSection = styled.div`
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    h2 {
+        margin-top: 40px;
+    }
+    hr {
+        width: 80%;
     }
     @media screen and ( min-width: ${screensize.small} ) {
         width: 80%;
-        max-width: 600px;
-        margin: 0 auto;
     }
     @media screen and ( min-width: ${screensize.mobile} ) {
         text-align: left;
         h2 {
             margin-top: 0px;
         }
-        > div {
-            width:100%;
-            margin: 0;
-            > section {
-                width: 50%;
-                display: inline-block;
-                vertical-align: middle;
-                // margin-top: 40px;
-                &:first-of-type {
-                    width: 50%;
-                    > img {
-                    }
-                }
-                &:last-of-type {
-                    width: 45%;
-                    padding-left: 5%;
-                    p {
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
     }
     @media screen and ( min-width: ${screensize.tablet} ) {
         width: 50%;
-        > div {
-            width: 80%;
-            margin: 0 10%;
-            > h2 {
-                display: block;
-                text-align: center;
-                margin-top: 40px;
-            }
-            > section {
-                vertical-align: middle;
-                > h2 {
-                    display: none;
-                }
-            }
-        }
     }
 `;
 const RightSection = styled.div`
+    //refer to form custom code
 `;
 
 const TwoSections = styled.div`
-max-width: 1200px;
-margin: 0 auto;
-> h1 {
-    text-align: center;
-    position: absolute;
-    right: 20px;
-    top: calc(120px + 10vw);
-    color: white;
-  @media screen and ( min-width: ${screensize.small} ) {
-      color: black;
-      position: relative!important;
-      top:0;
-      right:0;
-      left:0;
+    max-width: 1200px;
+    margin: 0 auto;
+    h2 {
+        margin-bottom: 20px;
     }
-  }
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-hr {
-//     width: 80%;
-//     margin: calc(60px + .525em) auto 80px;
-//     overflow: visible;
-//     padding: 0;
-//     border: 0;
-//     height: 1px;
-//     text-align: center;
-// }
-// hr:after {
-//     content: "▽";
-//     display: inline-block;
-//     position: relative;
-//     top: -0.525em;
-//     font-size: 1.5em;
-//     padding: 0 0.25em;
-//     background: transparent;
-//     color: var(--periwinkle);
-}
-> div {
-    display: block;
-    vertical-align: top;
-    &:first-of-type {
-        // width: 66%;
-        // margin: 0 auto;
-    }
-}
-@media screen and ( min-width: ${screensize.mobile} ) {
     > div {
-        width: 100%;
+        display: block;
         vertical-align: top;
-    }
-}
-    @media screen and ( min-width: ${screensize.tablet} ) {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        > div {
+        @media screen and ( min-width: ${screensize.tablet} ) {
             width: 50%;
             display: inline-block;
-            vertical-align: top;
         }
     }
 
