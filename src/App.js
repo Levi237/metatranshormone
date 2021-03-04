@@ -69,7 +69,7 @@ export default class App extends Component {
               </>
               } />
             <Route path={routes.ROOT} render={() => 
-              <FullScreenContainer><h1>Metamorphosis</h1></FullScreenContainer>
+              <FullScreenContainer><h1 class="title">Metamorphosis</h1></FullScreenContainer>
               } />
         </Switch>
       </AppContainer>
@@ -78,16 +78,19 @@ export default class App extends Component {
 };
 
 const AppContainer = styled.div`
-  h1 {
+  h1.title {
     margin-bottom: 40px!important;
     text-align: center;
+    @media screen and (min-width: ${ screens.mobile}) {
+      margin-top: 40px;
+    }
   }
 `;
 const Container = styled.div`
-width: 100vw;
-padding-top: 120px;
-background-color: #fff;
-transition: height .3s ease;
+  width: 100vw;
+  padding-top: 120px;
+  background-color: #fff;
+  transition: height .3s ease;
 `;
 const ScreenContainer = styled(Container)`
   padding-bottom: 60px;
