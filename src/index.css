@@ -36,6 +36,24 @@ h1 {
 }
 hr {
   background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
+}  
+body *:not(a) > hr {
+    margin: calc(60px + .525em) auto 80px;
+    overflow: visible;
+    padding: 0;
+    border: 0;
+    height: 1px;
+    text-align: center;
+}
+body *:not(a) > hr:after {
+    content: "▽";
+    display: inline-block;
+    position: relative;
+    top: -0.525em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: transparent;
+    color: var(--periwinkle);
 }
 /* NAV MENU ON/OFF SWITCH */
 #menu.active {

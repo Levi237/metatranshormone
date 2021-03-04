@@ -7,7 +7,7 @@ export default class Contact extends Component {
     render(){
         const { contact } = this.props;
         return(
-            <LocalWrapper>
+            <TwoSections>
                 <h1 class="title">Contact Us</h1>
                 <LeftSection>
                     <div>
@@ -37,7 +37,7 @@ export default class Contact extends Component {
                 <RightSection>
                     <EmailForm><h2>Send Us a Message</h2></EmailForm>
                 </RightSection>
-            </LocalWrapper>
+            </TwoSections>
         );
     };
 };
@@ -130,7 +130,7 @@ text-align: center;
 const RightSection = styled.div`
 `;
 
-const LocalWrapper = styled.div`
+const TwoSections = styled.div`
 max-width: 1200px;
 margin: 0 auto;
 > h1 {
@@ -159,7 +159,6 @@ hr {
     padding: 0;
     border: 0;
     height: 1px;
-    // background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
     text-align: center;
 }
 hr:after {
