@@ -95,34 +95,34 @@ const AuthFilter = styled.div`
 
 const Form = styled.form`
     position: relative;
+    overflow: scroll;
     z-index: 90000000000000000;
-    text-align: center;
     width: 80%;
     max-width: 600px;
-    background-color: #fff;
     padding: 20px 0;
-    overflow: scroll;
+    background-color: #fff;
     margin: 20px auto;
+    text-align: center;
 
     input {
-        font-size: 18px;
         height: 36px;
         margin: 5px auto;
         border-width: 1px;
         border-radius: 0px;
+        font-size: 18px;
     }
     input[type=submit] {
+        position: relative;
+        z-index: 900;
+        height: 58px;
+        width: 200px;
+        background-color: #fff;
+        border: #181717 solid 1px;
+        border-radius: 0;
+        color: #181717;
         font-size: 18px;
         line-height: 100%;
         text-transform: uppercase;
-        color: #181717;
-        background-color: #fff;
-        border-radius: 0;
-        height: 58px;
-        border: #181717 solid 1px;
-        width: 200px;
-        position: relative;
-        z-index: 900;
     }
     button {
         border-radius: 0px;
@@ -132,14 +132,13 @@ const Form = styled.form`
     .button,
     button {
         &:hover {
-            // background: rgba(161, 93, 42,.2);
             background: rgba(41, 191, 255,.2);
         }
     }
 
     label {
-        width: 44%;
         display: inline-block;
+        width: 44%;
         &:nth-of-type(even){
             margin-left: 1.75%
         }
@@ -160,39 +159,26 @@ const Form = styled.form`
             padding: 5px 5%;
         }
         textarea {
+            height: 120px;
             width: 86%;
+            padding: 2%;
+            margin: 5px 0;
             border: 1px solid black;
             border-radius: 0px;
-            height: 120px;
-            margin: 5px 0;
             font-family: Montserrat, Arial;
             font-weight: 500;
             font-size: 16px;
             line-height: 20px;
             color: #473E4E;
-            padding: 2%;
         }
     }
 
-    @media screen and (max-width: 1010px) {
-        >div.services-section {
-            max-width: 400px;
-        }
-    }
-    @media screen and (max-width: 900px) {
-        padding: 0;
-    }
-    @media screen and (max-width: 698px) {
-        // margin: 0 auto;
-
+    @media screen and (max-width: ${screensize.mobile}) {
         label {
             display: block;
             width: 90%;
             margin: 0 auto!important;
         }
-    }
-    @media screen and ( min-width: ${screensize.mobile}){
-
     }
 `;
 
