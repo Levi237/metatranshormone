@@ -34,7 +34,7 @@ const NavContainer = styled.div`
     color: #FFF;
     position: fixed;
     a {
-        font-size: 24px;
+        font-size: 24px!important;
         text-decoration: none;
         display: block;
         height: 44px;
