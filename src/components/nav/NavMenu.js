@@ -26,7 +26,7 @@ const NavContainer = styled.div`
     text-align: center;
     font-size: 20px;
     right: 0;
-    z-index: 111;
+    z-index: 7000;
     width: 100%;
     height: 100%;
     overflow: hidden;

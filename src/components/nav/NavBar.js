@@ -31,9 +31,14 @@ export default class NavBar extends Component {
 
 const LocalWrapper = styled.div`
     position: absolute;
+    z-index: 9000;
     width: 100vw;
-    height: 120px;
-    max-height: 120px;
+    height: 80px;
+    max-height: 80px;
+    @media screen and ( min-width: ${screensize.mobile} ) {
+        height: 120px;
+        max-height: 120px;
+    }
 `;
 const LogoWrapper = styled.div`
     display: inline-block;
@@ -43,14 +48,18 @@ const LogoWrapper = styled.div`
         transition: .3s ease;
     }
     img{
-        width: 80px;
-        margin: 20px 0 0 20px;
+        width: 60px;
+        margin: 10px 0 0 20px;
+        @media screen and ( min-width: ${screensize.mobile} ) {
+            width: 80px;
+            margin: 20px 0 0 20px;
+        }
     }
     span {
         position: absolute;
         font-size: 12px;
-        top: 50px;
-        left: 100px;
+        top: 30px;
+        left: 80px;
         @media screen and ( min-width: ${screensize.mobile} ) {
             top: 96px;
             left: 25px;
@@ -60,11 +69,14 @@ const LogoWrapper = styled.div`
 const NavWrapper = styled.div`
     display: inline-block;
     vertical-align: top;
-    width: calc(100vw - 120px);
-    margin-top: 50px;
+    width: calc(100vw - 80px);
+    margin-top: 30px;
     text-align: right;
     font-size: 20px;
     line-height: 20px;
+    @media screen and ( min-width: ${screensize.mobile} ) {                                                                                          
+        width: calc(100vw - 120px);
+    }
 
     > a {
         font-size: 20px;
@@ -83,7 +95,6 @@ const NavWrapper = styled.div`
             color: var(--lavender)!important;
             hr {
                 width: 100%;
-                // background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
             }
         }
         display: none;

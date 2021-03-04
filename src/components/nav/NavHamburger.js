@@ -15,7 +15,7 @@ const NavHamburger = ({ toggleMenu }) => {
 
 const Hamburger = styled.div`
   position: absolute;
-  z-index: 999;
+  z-index: 9999;
   right: 0;
   margin: -10px 35px 0 0;
 

@@ -96,7 +96,7 @@ const AuthFilter = styled.div`
 const Form = styled.form`
     position: relative;
     overflow: scroll;
-    z-index: 90000000000000000;
+    z-index: 5000;
     width: 80%;
     max-width: 600px;
     padding: 20px 0;
@@ -113,7 +113,7 @@ const Form = styled.form`
     }
     input[type=submit] {
         position: relative;
-        z-index: 900;
+        z-index: 5001;
         height: 58px;
         width: 200px;
         background-color: #fff;
