@@ -19,7 +19,7 @@ export default class Contact extends Component {
                         </section>
                         <section>
                             <h2>
-                                {contact.name}
+                                {contact.name},{" "}{contact.title}
                             </h2>
                             <p>
                                 {contact.address}
@@ -92,7 +92,7 @@ text-align: center;
                 width: 50%;
                 display: inline-block;
                 vertical-align: middle;
-                margin-top: 40px;
+                // margin-top: 40px;
                 &:first-of-type {
                     width: 50%;
                     > img {
