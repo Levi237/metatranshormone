@@ -44,7 +44,7 @@ export default class Contact extends Component {
 
 
 const LeftSection = styled.div`
-max-width: 700px;
+max-width: 600px;
 span {
     color: var(--lavender);
     font-weight: 800;
@@ -60,7 +60,6 @@ text-align: center;
             display: none;
         }
         > section {
-            // margin-top: 40px;
             &:first-of-type {
                 width: 100%;
                 > img {
@@ -77,8 +76,8 @@ text-align: center;
         }
     }
     @media screen and ( min-width: ${screens.small} ) {
-        width: 66%;
-        max-width: 700px;
+        width: 80%;
+        max-width: 600px;
         margin: 0 auto;
     }
     @media screen and ( min-width: ${screens.mobile} ) {
@@ -111,10 +110,9 @@ text-align: center;
     }
     @media screen and ( min-width: ${screens.tablet} ) {
         width: 50%;
-        // background-color: #ccc;
         > div {
-            width: calc(66% - 20px);
-            margin: 0 0 0 calc(17% + 20px)!important;
+            width: 80%;
+            margin: 0 10%;
             > h2 {
                 display: block;
                 text-align: center;
@@ -133,7 +131,7 @@ const RightSection = styled.div`
 `;
 
 const LocalWrapper = styled.div`
-max-width: 1400px;
+max-width: 1200px;
 margin: 0 auto;
 > h1 {
     text-align: center;

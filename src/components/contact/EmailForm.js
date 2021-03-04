@@ -96,8 +96,8 @@ const Form = styled.form`
     position: relative;
     z-index: 90000000000000000;
     text-align: center;
-    width: 66%;
-    max-width: 700px;
+    width: 80%;
+    max-width: 600px;
     background-color: #fff;
     padding: 20px 0;
     overflow: scroll;
