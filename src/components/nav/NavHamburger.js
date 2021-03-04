@@ -24,13 +24,13 @@ const Hamburger = styled.div`
     width: 35px;
     height: 4px;
     &:first-of-type{
-      background-color: var(--pink);
+      background-color: var(--lavender);
     }
     &:nth-of-type(2){
-      background-color: var(--blue);
+      background-color: var(--lavender);
     }
     &:last-of-type{
-      background-color: var(--pink);
+      background-color: var(--lavender);
     }
   }
   
