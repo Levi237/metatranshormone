@@ -11,7 +11,7 @@ export default class EmailForm extends Component {
     };
 
     render(){
-        const { emailValue, fNameValue, lNameValue, websiteValue, messageValue , addServices, services} = this.state
+        const { emailValue, fNameValue, lNameValue, websiteValue, messageValue } = this.state
 
         return(
             <Form 
