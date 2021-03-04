@@ -153,23 +153,23 @@ h2 {
     font-weight: 500;
 }
 hr {
-    width: 80%;
-    margin: calc(60px + .525em) auto 80px;
-    overflow: visible;
-    padding: 0;
-    border: 0;
-    height: 1px;
-    text-align: center;
-}
-hr:after {
-    content: "▽";
-    display: inline-block;
-    position: relative;
-    top: -0.525em;
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: transparent;
-    color: var(--periwinkle);
+//     width: 80%;
+//     margin: calc(60px + .525em) auto 80px;
+//     overflow: visible;
+//     padding: 0;
+//     border: 0;
+//     height: 1px;
+//     text-align: center;
+// }
+// hr:after {
+//     content: "▽";
+//     display: inline-block;
+//     position: relative;
+//     top: -0.525em;
+//     font-size: 1.5em;
+//     padding: 0 0.25em;
+//     background: transparent;
+//     color: var(--periwinkle);
 }
 > div {
     display: block;
