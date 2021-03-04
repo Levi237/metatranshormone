@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-// import { NavLink } from 'react-router-dom';
+import styled               from 'styled-components';
+
+import { screens }          from '../../constants/screens';
+// import { NavLink }          from 'react-router-dom';
 
 export default class About extends Component {
     render(){
         return(
             <LocalWrapper>
-                <h1>Metamorphosis Transgender Clinic</h1>
+                <h1 class="title">Metamorphosis Transgender Clinic</h1>
                 <GridContainer>
                     <section>
                         <div>
@@ -77,26 +79,40 @@ export default class About extends Component {
                     </section>
                 </GridContainer>
             </LocalWrapper>
-        )
-    }
-}
+        );
+    };
+};
 
 const LocalWrapper = styled.div`
 `;
 const GridContainer = styled.div`
-    max-width: 1000px;
+    max-width: 600px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: 
+    ' two '
+    ' one ' 
+        ' three' 
+        ' four ';
+    @media screen and (min-width: ${ screens.tablet}) {
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
         ' one two '
         ' three four ';
+    }
     section {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 30px;
+        padding: 30px 0;
+        p {
+            width: 80%;
+            margin: 0 auto;
+        }
         >div {
             width: 100%;
             > img {
@@ -105,24 +121,38 @@ const GridContainer = styled.div`
         }
         &:first-of-type {
             grid-area: one;
-            // background-color: var(--blue);
+            h2 {
+                text-align: center;
+            }
         }
         &:nth-of-type(2) {
             grid-area: two;
-            // background-color: var(--blue);
+            padding: 0 0 30px;
         }
         &:nth-of-type(3) {
             grid-area: three;
-            // background-color: var(--pink);
         }
         &:nth-of-type(4) {
             grid-area: four;
-            // background-color: var(--pink);
             h2 {
                 text-align: center;
             }
         }
         &:nth-of-type(even) {
+        }
+        @media screen and (min-width: ${ screens.tablet}) {
+            padding: 30px;
+            &:first-of-type {
+                h2 {
+                    text-align: left;
+                }
+            }
+            &:nth-of-type(2) {
+                padding: 30px;
+            }
+            p {
+                width: 100%;
+            }
         }
     }
 `;

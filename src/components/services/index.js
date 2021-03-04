@@ -6,7 +6,7 @@ export default class Services extends Component {
     render(){
         return(
             <LocalWrapper>
-                <h1>Our Services</h1>
+                <h1 class="title">Our Services</h1>
             </LocalWrapper>
         )
     }

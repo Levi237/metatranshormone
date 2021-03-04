@@ -8,7 +8,7 @@ export default class Contact extends Component {
         const { contact } = this.props;
         return(
             <LocalWrapper>
-                <h1>Contact Us</h1>
+                <h1 class="title">Contact Us</h1>
                 <LeftSection>
                     <div>
                         <h2>
