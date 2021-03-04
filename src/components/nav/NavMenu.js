@@ -30,7 +30,7 @@ const NavContainer = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgba(19,17,17,.9);
+    background-color: rgba(9,9,9,.95);
     color: #FFF;
     position: fixed;
     a {
