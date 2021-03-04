@@ -6,7 +6,7 @@ export default class About extends Component {
     render(){
         return(
             <LocalWrapper>
-                <h1>About Us</h1>
+                <h1>Metamorphosis Transgender Clinic</h1>
                 <GridContainer>
                     <section>
                         <div>
@@ -31,7 +31,7 @@ export default class About extends Component {
                     </section>
                     <section>
                         <div>
-                            <img src="http://metamedcenter.com/custom/2605/images/officephoto1.jpg"/>
+                            <img src="officephoto.jpg"/>
                         </div>
                     </section>
                     <section>
@@ -70,7 +70,7 @@ export default class About extends Component {
                                 <i>
                                     "My passion is delivering the highest 
                                     standard of care to promote her patients' goals for 
-                                    optimal health, well-being, and beauty.""
+                                    optimal health, well-being, and beauty."
                                 </i>
                             </p>
                         </div>
