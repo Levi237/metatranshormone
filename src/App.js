@@ -79,6 +79,7 @@ export default class App extends Component {
 
 const AppContainer = styled.div`
   h1.title {
+    margin-top: 20px;
     margin-bottom: 40px!important;
     text-align: center;
     @media screen and (min-width: ${ screensize.mobile}) {
@@ -101,6 +102,9 @@ const ScreenContainer = styled(Container)`
   background-color: #fff;
 `;
 const FullScreenContainer = styled(Container)`
-  height: calc( 100vh - 120px );
+  height: calc( 100vh - 80px );
   padding-bottom: 0;
+  @media screen and (min-width: ${ screensize.mobile}) {
+    height: calc( 100vh - 120px );
+  }
 `;
