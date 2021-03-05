@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
+
 import * as routes          from '../../constants/routes';
 import { screensize }       from '../../constants/screensize';
+
 import NavHamburger         from './NavHamburger';
 export default class NavBar extends Component {
-
     render(){
         return(
             <LocalWrapper>
                 <LogoWrapper>
                     <NavLink activeClassName="nav-active" to={routes.ROOT} >
-                        <>
-                            <img src="logo192.png"/>
-                            <span>Metamoprhosis</span>
-                        </>
+                        <img src="logo192.png"/>
+                        <span>Metamoprhosis</span>
                     </NavLink>
                 </LogoWrapper>
                 <NavWrapper>
