@@ -6,38 +6,46 @@ import { screensize } from '../../constants/screensize';
 export default class Contact extends Component {
     render(){
         const { contact } = this.props;
+
+        const leftSectionContact = 
+            <LeftSectionContact>
+                <h2>
+                    {contact.name}, {contact.title}
+                </h2>
+                <section>
+                    <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
+                </section>
+                <section>
+                    <h2>
+                        {contact.name},{" "}{contact.title}
+                    </h2>
+                    <p>
+                        {contact.address}
+                        {" "}
+                        {contact.suite}
+                        <br/>
+                        {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
+                        <br/>
+                        <span>{contact.phone}</span>
+                    </p>
+                </section>
+                <hr/>
+            </LeftSectionContact>
+        ;
+        const rightSectionContact =
+            <EmailForm><h2>Send Us a Message</h2></EmailForm>
+        ;
         return(
             <TwoSectionsWrapper>
-                <h1 class="title">Contact Us</h1>
+                <h1 class="title contact">Contact Us</h1>
                 <TwoSections>
-                    <LeftSection>
-                        <NestedTwoSection>
-                            <h2>
-                                {contact.name}, {contact.title}
-                            </h2>
-                            <section>
-                                <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
-                            </section>
-                            <section>
-                                <h2>
-                                    {contact.name},{" "}{contact.title}
-                                </h2>
-                                <p>
-                                    {contact.address}
-                                    {" "}
-                                    {contact.suite}
-                                    <br/>
-                                    {contact.city},{" "}{contact.state}{" "}{contact.zipcode}
-                                    <br/>
-                                    <span>{contact.phone}</span>
-                                </p>
-                            </section>
-                        </NestedTwoSection>
-                        <hr/>
-                    </LeftSection>
-                    <RightSection>
-                        <EmailForm><h2>Send Us a Message</h2></EmailForm>
-                    </RightSection>
+                    <div>
+                        {leftSectionContact}
+                    </div>
+                    <div>
+                        {rightSectionContact}
+                        
+                    </div>
                 </TwoSections>
             </TwoSectionsWrapper>
         );
@@ -46,7 +54,7 @@ export default class Contact extends Component {
 
 
 const TwoSectionsWrapper = styled.div`
-    > h1 {
+    > h1.contact {
         text-align: center;
         position: absolute;
         right: 20px;
@@ -61,8 +69,15 @@ const TwoSectionsWrapper = styled.div`
         }
     }
 `;
-const NestedTwoSection = styled.div`
+const LeftSectionContact = styled.div`
     width:100%;
+    text-align: center;
+    h2 {
+        margin-top: 40px;
+    }
+    hr {
+        width: 80%;
+    }
         margin: 0;
         > h2 {
             display: none;
@@ -86,12 +101,20 @@ const NestedTwoSection = styled.div`
             }
 
         }
+        @media screen and ( min-width: ${screensize.small} ) {
+            width: 80%;
+            margin: 0 auto;
+        }
         @media screen and ( min-width: ${screensize.mobile} ) {
         width:100%;
         margin: 0;
+        h2 {
+            margin-top: 0px;
+        }
         > section {
             display: inline-block;
             vertical-align: middle;
+            text-align: left;
             &:first-of-type {
                 width: 50%;
             }
@@ -107,6 +130,9 @@ const NestedTwoSection = styled.div`
     @media screen and ( min-width: ${screensize.tablet} ) {
         width: 80%;
         margin: 0 10%;
+        h2 {
+            margin-top: 40px;
+        }
         > h2 {
             display: block;
             text-align: center;
@@ -119,32 +145,6 @@ const NestedTwoSection = styled.div`
             }
         }
     }
-`;
-const LeftSection = styled.div`
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    h2 {
-        margin-top: 40px;
-    }
-    hr {
-        width: 80%;
-    }
-    @media screen and ( min-width: ${screensize.small} ) {
-        width: 80%;
-    }
-    @media screen and ( min-width: ${screensize.mobile} ) {
-        text-align: left;
-        h2 {
-            margin-top: 0px;
-        }
-    }
-    @media screen and ( min-width: ${screensize.tablet} ) {
-        width: 50%;
-    }
-`;
-const RightSection = styled.div`
-    //refer to form custom code
 `;
 
 const TwoSections = styled.div`
