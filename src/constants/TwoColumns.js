@@ -12,7 +12,6 @@ export default class TwoColumns extends Component {
     };
 };
 
-
 const TwoColumnsWrapper = styled.div`
     max-width: 1200px;
     margin: 0 auto;
@@ -24,5 +23,4 @@ const TwoColumnsWrapper = styled.div`
             display: inline-block;
         }
     }
-
 `;
