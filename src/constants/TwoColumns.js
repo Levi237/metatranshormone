@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
-import styled               from 'styled-components';
-import { screensize }       from './screensize';
+import React            from 'react';
+import styled           from 'styled-components';
+import { screensize }   from './screensize';
 
-export default class TwoColumns extends Component {
-    render(){
+const TwoColumns =({children})=> {
         return(
             <TwoColumnsWrapper>
-                {this.props.children}
+                {children}
             </TwoColumnsWrapper>
         );
-    };
-};
+    }
+;
 
 const TwoColumnsWrapper = styled.div`
     max-width: 1200px;
@@ -24,3 +23,5 @@ const TwoColumnsWrapper = styled.div`
         }
     }
 `;
+
+export default TwoColumns;
