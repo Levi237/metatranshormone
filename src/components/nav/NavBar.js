@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink }          from 'react-router-dom';
 import styled               from 'styled-components';
 import * as routes          from '../../constants/routes';
-import { screensize }          from '../../constants/screensize';
+import { screensize }       from '../../constants/screensize';
 import NavHamburger         from './NavHamburger';
 export default class NavBar extends Component {
 

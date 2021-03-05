@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import EmailForm from './EmailForm';
-import { screensize } from '../../constants/screensize';
-import TwoColumns from '../global/TwoColumns'
+import styled               from 'styled-components';
+import EmailForm            from './EmailForm';
+import { screensize }       from '../../constants/screensize';
+import TwoColumns           from '../global/TwoColumns'
 
 export default class Contact extends Component {
     render(){

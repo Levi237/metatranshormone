@@ -3,7 +3,7 @@ import { Switch, Route }    from 'react-router-dom';
 import styled               from 'styled-components';
 
 import * as routes          from './constants/routes';
-import { screensize }          from './constants/screensize';
+import { screensize }       from './constants/screensize';
 
 import NavBar               from './components/nav/NavBar';
 import NavMenu              from './components/nav/NavMenu';

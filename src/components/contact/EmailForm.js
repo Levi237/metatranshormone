@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { screensize } from '../../constants/screensize';
+import styled               from 'styled-components';
+import { screensize }       from '../../constants/screensize';
 export default class EmailForm extends Component { 
     state = {
         emailValue: '',

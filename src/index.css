@@ -39,6 +39,7 @@ h2 {
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 hr {
   background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
 }  
@@ -60,6 +61,7 @@ body *:not(a) > hr:after {
     background: transparent;
     color: var(--periwinkle);
 }
+
 /* NAV MENU ON/OFF SWITCH */
 #menu.active {
   max-width: 100vw;
@@ -73,11 +75,10 @@ body *:not(a) > hr:after {
 .inactive {
   max-width: 0;
   transition: .8s ease-in-out;
-  transition-delay: .3s !important;
+  transition-delay: .3s!important;
 }
 
 /* NAV GLOBAL STYLE */
 .nav-active {
   color: var(--lavender)!important;
-  /* font-weight: 600; */
 }
