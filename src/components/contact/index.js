@@ -15,10 +15,11 @@ export default class Contact extends Component {
                 <h2>
                     {contact.name}, {contact.title}
                 </h2>
-                <section>
+                <TwoColumns>
+                <div>
                     <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
-                </section>
-                <section>
+                </div>
+                <div>
                     <h2>
                         {contact.name},{" "}{contact.title}
                     </h2>
@@ -31,7 +32,8 @@ export default class Contact extends Component {
                         <br/>
                         <span>{contact.phone}</span>
                     </p>
-                </section>
+                </div>
+                </TwoColumns>
                 <hr/>
             </LeftSectionContact>
         ;
@@ -79,6 +81,7 @@ const LeftSectionContact = styled.div`
     text-align: center;
     h2 {
         margin-top: 40px;
+        padding-left: 20px;
     }
     hr {
         width: 80%;
@@ -87,9 +90,8 @@ const LeftSectionContact = styled.div`
     > h2 {
         display: none;
     }
-    > section {
+    > div > div {
         &:first-of-type {
-            width: 100%;
             > img {
                 width: 100%;
             }
@@ -115,18 +117,14 @@ const LeftSectionContact = styled.div`
         h2 {
             margin-top: 0px;
         }
-        > section {
+        > div > div {
             display: inline-block;
             vertical-align: middle;
             text-align: left;
-            &:first-of-type {
-                width: 50%;
-            }
             &:last-of-type {
-                width: 45%;
-                padding-left: 5%;
                 p {
                     font-size: 18px;
+                    padding-left: 20px;
                 }
             }
         }
@@ -136,13 +134,15 @@ const LeftSectionContact = styled.div`
         margin: 0 10%;
         h2 {
             margin-top: 40px;
+            margin-bottom: 50px;
+            padding: 0;
         }
         > h2 {
             display: block;
             text-align: center;
             margin-top: 40px;
         }
-        > section {
+        > div > div {
             vertical-align: middle;
             > h2 {
                 display: none;
