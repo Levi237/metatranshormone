@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmailForm from './EmailForm';
 import { screensize } from '../../constants/screensize';
+import TwoColumns from '../global/TwoColumns'
 
 export default class Contact extends Component {
     render(){
@@ -36,29 +37,28 @@ export default class Contact extends Component {
             <EmailForm><h2>Send Us a Message</h2></EmailForm>
         ;
         return(
-            <TwoSectionsWrapper>
+            <ContactWrapper>
                 <h1 class="title contact">Contact Us</h1>
-                <TwoSections>
+                <TwoColumns>
                     <div>
                         {leftSectionContact}
                     </div>
                     <div>
-                        {rightSectionContact}
-                        
+                        {rightSectionContact} 
                     </div>
-                </TwoSections>
-            </TwoSectionsWrapper>
+                </TwoColumns>
+            </ContactWrapper>
         );
     };
 };
 
 
-const TwoSectionsWrapper = styled.div`
+const ContactWrapper = styled.div`
     > h1.contact {
         text-align: center;
         position: absolute;
         right: 20px;
-        top: calc(80px + 10vw);
+        top: calc(80px - 20px + 10vw);
         color: white;
         @media screen and ( min-width: ${screensize.small} ) {
             color: black;
@@ -78,34 +78,33 @@ const LeftSectionContact = styled.div`
     hr {
         width: 80%;
     }
-        margin: 0;
-        > h2 {
-            display: none;
-        }
-        > section {
-            &:first-of-type {
+    margin: 0;
+    > h2 {
+        display: none;
+    }
+    > section {
+        &:first-of-type {
+            width: 100%;
+            > img {
                 width: 100%;
-                > img {
-                    width: 100%;
-                }
             }
-            &:last-of-type {
-                p {
-                    font-size: 16px;
-                    line-height: 150%;
-                }
-                span {
-                    color: var(--lavender);
-                    font-weight: 800;
-                }
+        }
+        &:last-of-type {
+            p {
+                font-size: 16px;
+                line-height: 150%;
             }
-
+            span {
+                color: var(--lavender);
+                font-weight: 800;
+            }
         }
-        @media screen and ( min-width: ${screensize.small} ) {
-            width: 80%;
-            margin: 0 auto;
-        }
-        @media screen and ( min-width: ${screensize.mobile} ) {
+    }
+    @media screen and ( min-width: ${screensize.small} ) {
+        width: 80%;
+        margin: 0 auto;
+    }
+    @media screen and ( min-width: ${screensize.mobile} ) {
         width:100%;
         margin: 0;
         h2 {
@@ -145,21 +144,4 @@ const LeftSectionContact = styled.div`
             }
         }
     }
-`;
-
-const TwoSections = styled.div`
-    max-width: 1200px;
-    margin: 0 auto;
-    h2 {
-        margin-bottom: 20px;
-    }
-    > div {
-        display: block;
-        vertical-align: top;
-        @media screen and ( min-width: ${screensize.tablet} ) {
-            width: 50%;
-            display: inline-block;
-        }
-    }
-
 `;
