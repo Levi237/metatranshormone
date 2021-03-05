@@ -37,6 +37,7 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 hr {
   background-image: linear-gradient(to right, transparent, var(--blue), var(--pink), transparent);
