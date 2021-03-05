@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
-import EmailForm            from './EmailForm';
+
 import { screensize }       from '../../constants/screensize';
-import TwoColumns           from '../global/TwoColumns'
+
+import TwoColumns           from '../../constants/TwoColumns'
+import EmailForm            from './EmailForm';
 
 export default class Contact extends Component {
     render(){
@@ -67,6 +69,9 @@ const ContactWrapper = styled.div`
             right:0;
             left:0;
         }
+    }
+    > div > div {
+        vertical-align: top;
     }
 `;
 const LeftSectionContact = styled.div`

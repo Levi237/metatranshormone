@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled               from 'styled-components';
 
-import { screensize }          from '../../constants/screensize';
+import { screensize }       from '../../constants/screensize';
+import TwoColumns           from '../../constants/TwoColumns';
 // import { NavLink }          from 'react-router-dom';
 
 export default class About extends Component {
@@ -9,40 +10,45 @@ export default class About extends Component {
         return(
             <LocalWrapper>
                 <h1 class="title">Metamorphosis Transgender Clinic</h1>
-                <GridContainer>
-                    <section>
-                        <div>
-                            <h2>About Us</h2>
-                            <br/>
-                            <p>
-                                At Metamorphosis, we believe your best is yet to come. 
-                                And whatever change you seek, we will be present to support
-                                you through it. Whether bio-identical hormone replacement or 
-                                skin rejuvenation.... welcome to the next stage of you. We 
-                                are your like your personal concierge medical office with a 
-                                dedicated and highly qualified doctor who attends to your needs.  
-                            </p>
-                            <br/>
-                            <p>
-                                Our MISSION is to provide a safe, nurturing environment in which 
-                                patients may access personalized therapies delivered at the 
-                                highest standard of care, enabling them to heal and transform 
-                                into their full potential for wellness.
-                            </p>
-                        </div>
-                    </section>
-                    <section>
-                        <div>
+                <TwoColumns>
+                    <div>
+                        <LeftSectionRowOne>
                             <img src="officephoto.jpg"/>
-                        </div>
-                    </section>
-                    <section>
-                        <div>
+                            <div>
+                                <h2>About Us</h2>
+                                <br/>
+                                <p>
+                                    At Metamorphosis, we believe your best is yet to come. 
+                                    And whatever change you seek, we will be present to support
+                                    you through it. Whether bio-identical hormone replacement or 
+                                    skin rejuvenation.... welcome to the next stage of you. We 
+                                    are your like your personal concierge medical office with a 
+                                    dedicated and highly qualified doctor who attends to your needs.  
+                                </p>
+                                <br/>
+                                <p>
+                                    Our MISSION is to provide a safe, nurturing environment in which 
+                                    patients may access personalized therapies delivered at the 
+                                    highest standard of care, enabling them to heal and transform 
+                                    into their full potential for wellness.
+                                </p>
+                            </div>
+                        </LeftSectionRowOne>
+                    </div>
+                    <div>
+                        <RightSectionRowOne>
+                            <img src="officephoto.jpg"/>
+                        </RightSectionRowOne>
+                    </div>
+                </TwoColumns>
+                <TwoColumns>
+                    <div>
+                        <LeftSectionRowTwo>
                             <img src="http://incomeactivator.com/custom/2605/images/KristenVierreggerMDsmallsitting.jpg"/>
-                        </div>
-                    </section>
-                    <section>
-                        <div>
+                        </LeftSectionRowTwo>
+                    </div>
+                    <div>
+                        <RightSectionRowTwo>
                             <h2>Meet the Doctor</h2>
                             <br/>
                             <p>
@@ -75,84 +81,43 @@ export default class About extends Component {
                                     optimal health, well-being, and beauty."
                                 </i>
                             </p>
-                        </div>
-                    </section>
-                </GridContainer>
+                        </RightSectionRowTwo>
+                    </div>
+                </TwoColumns>
             </LocalWrapper>
         );
     };
 };
 
-const LocalWrapper = styled.div`
+const LeftSectionRowTwo= styled.section`
+
 `;
-const GridContainer = styled.div`
-    max-width: 600px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: 
-    ' two '
-    ' one ' 
-        ' three' 
-        ' four ';
-    @media screen and (min-width: ${ screensize.tablet}) {
-        max-width: 1000px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: 
-        ' one two '
-        ' three four ';
+const RightSectionRowTwo= styled.section`
+    padding: 30px;
+`;
+const LeftSectionRowOne = styled.section`
+> div{
+    padding: 30px;
+}
+    img {
+        @media screen and ( min-width: ${screensize.tablet} ) {
+            display: none;
+        }
     }
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 0;
-        p {
-            width: 80%;
-            margin: 0 auto;
+`;
+const RightSectionRowOne = styled.section`
+    img {
+        display: none;
+        @media screen and ( min-width: ${screensize.tablet} ) {
+            display: block;
         }
-        >div {
-            width: 100%;
-            > img {
-                width: 100%;
-            }
-        }
-        &:first-of-type {
-            grid-area: one;
-            h2 {
-                text-align: center;
-            }
-        }
-        &:nth-of-type(2) {
-            grid-area: two;
-            padding: 0 0 30px;
-        }
-        &:nth-of-type(3) {
-            grid-area: three;
-        }
-        &:nth-of-type(4) {
-            grid-area: four;
-            h2 {
-                text-align: center;
-            }
-        }
-        &:nth-of-type(even) {
-        }
-        @media screen and (min-width: ${ screensize.tablet}) {
-            padding: 30px;
-            &:first-of-type {
-                h2 {
-                    text-align: left;
-                }
-            }
-            &:nth-of-type(2) {
-                padding: 30px;
-            }
-            p {
-                width: 100%;
-            }
-        }
+    }
+`;
+const LocalWrapper = styled.div`
+    > div > div {
+        vertical-align: middle;
+    }
+    img {
+        width: 100%;
     }
 `;
